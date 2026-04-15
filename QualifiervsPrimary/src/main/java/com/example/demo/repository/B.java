@@ -1,0 +1,20 @@
+package com.example.demo.repository;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component("B")
+public class B implements Play
+{
+
+	@Override
+	public void playCricket() {
+		// TODO Auto-generated method stub
+		System.out.println("I am playing cricket in ground B");
+	}
+	
+     
+	
+	
+
+}

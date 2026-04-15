@@ -1,0 +1,21 @@
+package com.example.testapp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.testapp.model.Student;
+import com.example.testapp.service.H2Service;
+
+public class H2Controller {
+	
+	@Autowired
+	H2Service hs;
+	
+	@PostMapping("/save")
+	public void save(Student s) {
+		hs.storeTodB(s);
+		
+		
+	}
+
+}

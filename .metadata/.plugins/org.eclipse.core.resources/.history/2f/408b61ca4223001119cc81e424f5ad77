@@ -1,0 +1,6 @@
+package carpack;
+
+public class GasEngine implements Engine
+{
+
+}

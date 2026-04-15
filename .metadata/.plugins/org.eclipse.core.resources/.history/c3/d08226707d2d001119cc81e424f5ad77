@@ -1,0 +1,27 @@
+package com.example.testapp.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.testapp.model.Student;
+import com.example.testapp.repository.CrudRepo;
+
+@Service
+public class H2Service {
+	
+	@Autowired
+	CrudRepo cr;
+	
+	public void storeTodB(Student s) {
+		cr.save(s);
+	}
+	
+	public Student getStudentDetails(int id) {
+		Optional<Student> s=cr.findById(id);
+		return s.get();
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.example.testapp.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.example.testapp.model.Student;
+
+@Repository
+public interface CrudRepo extends JpaRepository<Student,Integer>
+{
+	 public Student findByName(String s);
+	 
+	 @Query("from Student")
+	 public List<Student> fetchStudentDetails();
+}
+
+//class proxyClass implements crudrepo
+//{
+//	
+//}
+

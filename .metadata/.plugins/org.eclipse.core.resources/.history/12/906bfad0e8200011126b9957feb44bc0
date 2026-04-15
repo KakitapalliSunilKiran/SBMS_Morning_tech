@@ -1,0 +1,5 @@
+package paypackage;
+
+public class CreditCardPayment {
+
+}

@@ -1,0 +1,19 @@
+PostMan
+Hoppscotch
+External Application
+Browser
+Angular/React
+==============================
+
+Rest Api 
+GraphQl - GraphQl Api 
+
+=========================================
+Dispatcher Servlet -> It will guide you to respective controller layer 
+====================================
+
+@Component ->it is the parent of all the 3 annotations 
+
+@RestController
+@Service 
+@Repository

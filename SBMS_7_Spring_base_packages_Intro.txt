@@ -1,0 +1,80 @@
+@SpringBootApplication:
+      -> @SpringBootConfiguration : bean creation is directly based on Java classes with the help of Annotaions
+      -> @EnableAutoconfiguration :
+                     Dependency Injection will be Automatically done 
+                     Tomcat is Automatically configured
+                     For Database connections automatically done 
+                     For security if we place simple dependency that security page will be loaded
+        ->@ComponentScan
+
+Spring vs Spring Boot 
+=======================
+Spring :
+========
+Dependency Injection is the new feature for Spring 
+Spring Boot :
+===========
+Autoconfiguration is the new feature 
+--------------------------------------------------------
+Spring :
+=======
+there is no In memory Database 
+
+Spring Boot :
+============
+We have Support of H2 In memory Database (5 mb)
+-----------------------------------------------------------
+
+Spring :
+========
+Dependency resolution is not there in Spring 
+
+Spring Boot :
+============
+Dependency resolution is there in Spring Boot 
+-------------------------------------------------------------
+Spring :
+========
+Actuator is not there in Spring
+
+Spring Boot :
+==============
+Actuator is there in Spring Boot 
+---------------------------------------------------------------
+
+Spring :
+========
+There is need to have external file for deployment 
+
+Spring Boot :
+=============
+There is no need of extra file for deployment 
+--------------------------------------------------------------
+
+
+Three tier Application :
+========================
+
+-> Controller , Service , Repository (DAO)
+
+CRUD (Rest Apis)
+Create : if i want to create a record on Data base (i e PostMapping )
+
+Read : To fetch records from the Database (ie GetMapping)
+
+Update : if i want to update existing records we will go for Update (ie PutMapping)
+        if the id is not there it will update 
+
+Delete: if i want to Delete record go for Delete mapping 
+===========================================================
+
+Controller -> this layer will have Annotaion called @RestController 
+
+@Controller vs @RestController
+
+if we controller annotation , you shouldbe having @ResponseBody at the method level 
+if we use @RestController there is no need of extra annotation
+
+
+
+

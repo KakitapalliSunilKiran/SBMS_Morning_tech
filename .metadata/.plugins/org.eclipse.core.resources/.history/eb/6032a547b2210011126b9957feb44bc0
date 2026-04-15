@@ -1,0 +1,14 @@
+package automotive;
+
+public class Tester {
+	
+	public static void main(String args[])
+	{
+		//Constructor Injection
+//		Car c = new Car(new GasEngine());
+//		c.startCar();
+		
+		//Setter Injection
+		Car c = new Car();
+	}
+}

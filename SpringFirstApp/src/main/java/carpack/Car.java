@@ -1,0 +1,35 @@
+package carpack;
+
+public class Car 
+{
+//	Engine e1;
+	Engine e;
+	
+	
+	
+	Car(){
+		System.out.println("Car bean has created");
+	}
+	public Car(Engine e) {
+		super();
+		System.out.println("Hi I am in Car class constructor");
+		this.e = e;
+	}
+
+	public Engine getE() {
+		return e;
+	}
+
+	public void setE(Engine e) {
+		System.out.println("Hi I am in Car class Setter Injection");
+		this.e = e;
+	}
+
+	public void startCar() {
+		e.startEngine();
+	}
+	
+
+
+
+}

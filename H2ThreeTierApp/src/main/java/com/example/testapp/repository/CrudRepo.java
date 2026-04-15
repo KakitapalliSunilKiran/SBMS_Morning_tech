@@ -1,0 +1,47 @@
+package com.example.testapp.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.example.testapp.model.Student;
+
+import jakarta.transaction.Transactional;
+
+@Repository
+public interface CrudRepo extends JpaRepository<Student,Integer>
+{
+	 public Student findByName(String s);
+	 
+	 @Query("from Student")
+	 public List<Student> fetchStudentDetails();
+	 
+	 @Query("from Student where Id=:id")
+	 public Student fetchStudentDetailsSingle(int id);
+	 
+	 @Transactional
+	 @Modifying
+	 @Query("delete from Student where Id=:id")
+	 public void deleteRecord(int id);
+	 
+	 @Query("select new com.example.testapp.model.Student(s.id, s.clgName) from Student s where s.id = :id")
+	 public Student fetchStudentDetailsMultiple(int id);
+	 
+//	 @Query("select * from student where id=:id",nativeQuery=true)
+//	 public Student fetchStudentDetailsMultiple(int id);
+//	 
+//	 @Query(value = "SELECT * FROM student WHERE id = :id", nativeQuery = true)
+//	 Student fetchStudentDetailsMultiple(@Param("id") int id);
+
+	 //DTO Projection 
+}
+
+//class proxyClass implements crudrepo
+//{
+//	
+//}
+

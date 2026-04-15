@@ -1,0 +1,37 @@
+C-> create -> persist a record in DB 
+
+R -> it will retrive a record from DB 
+
+U -> It will update the existing record 
+
+D -> It will delete the existing record 
+
+=========================================================================
+JPARepository  or CrudRepository
+
+Repository
+
+CrudRepository
+
+Paginationand Sorting 
+
+JPARepository
+
+JDbc -> 
+
+load the class 
+prepared stmt 
+Result rs 
+dr 
+=====================================
+
+spring-data-jpa 
+h2 driver class
+=====================================
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+package com.example.demo.exceptions;
+
+public class OwnCustomException extends RuntimeException
+{
+	OwnCustomException(String str){
+		super(str);
+	}
+}

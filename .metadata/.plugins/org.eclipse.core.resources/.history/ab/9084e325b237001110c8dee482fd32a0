@@ -1,0 +1,67 @@
+package com.example.testapp.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.testapp.model.Student;
+import com.example.testapp.service.H2Service;
+
+@RestController
+@RequestMapping("api/v1/")
+public class H2Controller {
+	
+	@Autowired
+	H2Service hs;
+	
+	@PostMapping("/save")
+	public void save(@RequestBody Student s) {
+		hs.storeTodB(s);
+	}
+	
+	@GetMapping("/fetch/{id}")
+	public Student getStudentDetails(@PathVariable("id") int id) {
+		return hs.getStudentDetails(id);
+		
+	}
+	
+	@GetMapping("/fetch1/{name}")
+	public Student getStudentDetailsByNamr(@PathVariable("name") String name) {
+		return hs.getStudentDetailsByName(name);
+		
+	}
+	//userName
+	//name Na
+	
+	@PutMapping("/update/{id}/{name}")
+	public Student updateStudentDetails(@PathVariable("id") int id,@PathVariable("name") String name) {
+		return hs.updateStudentDetails(id,name);
+	}
+	//ResponseEntity
+	//Status codes
+	
+	@DeleteMapping("/delete/{id}")
+	public void deleteByIdmethod(@PathVariable("id") int id) 
+	{
+		hs.deleteStudentDetailsMethod(id);
+	}
+	
+	@GetMapping("/fetchAll")
+	public List<Student> fetchAllStudentDetails() {
+		return hs.fetchStudentDetails();
+	}
+	
+	@GetMapping("/fetchSingle/{id}")
+	public List<Student> fetchAllStudentDetailsSingle(@PathVariable("id") int id) {
+		return hs.fetchStudentDetailsSingle();
+	}
+	
+}

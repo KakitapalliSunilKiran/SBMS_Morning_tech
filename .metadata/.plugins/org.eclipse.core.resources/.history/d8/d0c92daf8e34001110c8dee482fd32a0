@@ -1,0 +1,33 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.repo.MyRepo;
+
+@Service
+public class MyService {
+	
+	
+	private  MyRepo myRepo;
+
+    @Autowired
+	public void setMyRepo(MyRepo myRepo) {
+    	System.out.println("I am in Setter");
+		this.myRepo = myRepo;
+	}
+
+	@Autowired
+	public MyService(MyRepo myRepo) {
+		System.out.println("I am in constructor");
+		super();
+		this.myRepo = myRepo;
+	}
+
+	public String getMessage() {
+		return myRepo.getMessage();
+	}
+
+
+
+}

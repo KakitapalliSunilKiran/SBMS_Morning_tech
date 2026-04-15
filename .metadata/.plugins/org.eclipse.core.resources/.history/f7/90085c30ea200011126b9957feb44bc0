@@ -1,0 +1,18 @@
+package paypackage;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Injecting through constructor
+		//Injecting through setter
+		//Injecting through field injection
+		PaymentInterface pi = new PaymentInterface();
+		pi.p=new DebitCardPayment();
+		
+		pi.processPayment();
+		
+
+	}
+
+}

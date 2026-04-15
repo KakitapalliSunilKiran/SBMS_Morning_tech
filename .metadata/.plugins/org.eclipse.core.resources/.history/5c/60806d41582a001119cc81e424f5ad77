@@ -1,0 +1,12 @@
+package com.example.testapp.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class IntroService {
+	
+	public String getMessage() {
+		return "Hloo I am Sunil Kiran";
+	}
+
+}

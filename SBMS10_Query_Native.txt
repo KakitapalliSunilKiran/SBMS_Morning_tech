@@ -1,0 +1,29 @@
+1. using Predefined methods
+2. Using Derived methods
+3. Query
+4. Native Query
+====================================
+if you want to write bit complex 
+filtering on multiple fields , joins 
+
+We write using sql query it follows Java class and Variable name 
+
+student 
+Student
+=====================================
+
+loose coupling vs performance :
+==============================
+
+@Query is best approach in terms of Loose coupling 
+@native Query is best approach in terms of performance
+========================================================
+Example Api 
+Criteria builder 
+===============================================
+@Qualifier 
+@primary
+
+FactSet 
+=============================================
+

@@ -1,0 +1,21 @@
+package carpack;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Tester 
+{
+	public static void main(String args[]) 
+	{
+		ApplicationContext ctx = 
+		        new ClassPathXmlApplicationContext("beans-config.xml");
+//		GasEngine ge = ctx.getBean(GasEngine.class);
+//		System.out.println(ge.hashCode());
+//		PetrolEngine pe = ctx.getBean(PetrolEngine.class);
+//		System.out.println(pe.hashCode());
+		Car c = ctx.getBean(Car.class);
+		c.startCar();
+		
+	}
+
+}

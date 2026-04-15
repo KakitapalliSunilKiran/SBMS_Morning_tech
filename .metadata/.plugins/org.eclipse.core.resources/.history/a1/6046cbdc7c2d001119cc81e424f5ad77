@@ -1,0 +1,32 @@
+package com.example.testapp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.testapp.model.Student;
+import com.example.testapp.service.H2Service;
+
+@RestController
+@RequestMapping("api/v1/")
+public class H2Controller {
+	
+	@Autowired
+	H2Service hs;
+	
+	@PostMapping("/save")
+	public void save(@RequestBody Student s) {
+		hs.storeTodB(s);
+	}
+	
+	@GetMapping("/fetch")
+	public Student getStudentDetails(int id) {
+		return null;
+		
+	}
+	
+	
+}

@@ -1,0 +1,48 @@
+package carpack;
+
+public class Car 
+{
+	Engine e;
+	Engine e1;
+	
+	
+	Car(){}
+	public Car(Engine e) {
+		super();
+		System.out.println("Hi I am in Car class constructor");
+		this.e = e;
+	}
+
+	public Engine getE() {
+		return e;
+	}
+
+	public void setE(Engine e) {
+		System.out.println("Hi I am in Car class Setter Injection");
+		this.e = e;
+	}
+	
+	public Engine getE1() {
+		return e1;
+	}
+	public void setE1(Engine e1) {
+		this.e1 = e1;
+	}
+	
+//	public Seat getS() {
+//		return s;
+//	}
+//	public void setS(Seat s) {
+//		this.s = s;
+//	}
+
+	public void startCar() {
+		e.startEngine();
+	}
+	
+//	public void useSeat() {
+//		s.useSeat();;
+//	}
+
+
+}

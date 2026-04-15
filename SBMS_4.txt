@@ -1,0 +1,53 @@
+Why Servlets outdated
+Why Jdbc outdated 
+PL vs Technology vs framework
+different framework
+evolution story servlets->struts , jdbc->Hibernate
+what made struts and hibernate 
+What is three tier Architecture 
+different modules of Spring 
+
+Controller:
+==========
+It is like an Entry point , it will capture all requests 
+
+Service:
+=========
+all the Busineess logic will be written in Service Layer 
+
+Repository :
+===========
+All the database related Configurations will be written Repository
+layer 
+
+different modules of Spring :
+=============================
+Spring core 
+Spring context 
+Spring AOP 
+Spring JDBC 
+Spring ORM
+Spring Rest 
+Spring web 
+Spring security 
+Spring Batch 
+Spring cloud 
+==============================================
+Before going Spring core and context 
+IOC , DI , Autowiring 
+
+IOC : It is used container used to Hold all the beans created by the 
+      framework
+
+Car c ; //target variable
+new Car()// Dependent Object 
+DI : The process of Injecting target class object/bean into Dependent class
+     reference variable is called DI 
+Autowiring : Dependent Injection process is called Autowiring 
+Beans : The Objects which are created by the framework are called beans
+
+//--------------------------------------------------------
+Strategy :
+Implementation should be Via interfaces only it should not be with concreate classes
+There should not be any direct communication , it should happen via interface 
+//------------------------------------------------------------

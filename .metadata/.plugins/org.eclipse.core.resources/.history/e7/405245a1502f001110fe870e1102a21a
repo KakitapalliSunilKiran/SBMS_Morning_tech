@@ -1,0 +1,20 @@
+package automotive;
+
+public class Tester {
+	
+	public static void main(String args[])
+	{
+		//Constructor Injection
+//		Car c = new Car(new GasEngine());
+//		c.startCar();
+		
+		//Setter Injection
+//		Car c = new Car();
+//		c.setE(new PetrolEngine());
+//		c.startCar();
+		//80 percent ->60
+		Car c = new Car();
+		c.e=new DieselEngine();
+		c.startCar();
+	}
+}

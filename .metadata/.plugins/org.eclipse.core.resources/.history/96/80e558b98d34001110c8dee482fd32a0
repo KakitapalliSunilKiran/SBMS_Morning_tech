@@ -1,0 +1,18 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.repo.MyRepo;
+
+@Service
+public class MyService {
+	
+	@Autowired
+	private MyRepo myRepo;
+	
+	public String getMessage() {
+		return myRepo.getMessage();
+	}
+
+}

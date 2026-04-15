@@ -1,0 +1,270 @@
+Sunil 
+Senior Softeware Engineer 
+Spring boot and MicroServices 
+DSA and System design
+===========================================
+Spring boot and Microservices 
+==============================
+Core Java :
+==========
+    OOPS 
+    Collection framework 
+    Exception Handling 
+    Multithreading 
+    IO Streams 
+    Java 8 features 
+
+Advanced Java:
+=============
+    JDBC 
+    Servlets 
+    JSP
+    MVC 
+========================
+Who should learn this Spring boot and MicroServices :
+=====================================================
+    * Legacy technologies 
+    * Who knows core Java (Core Java frameworks)
+    * Experienced people 
+    * Career gap students 
+    * Freshers 
+
+Any kind of projects can be done mainly by using Spring Boot and Microservices 
+=============================================
+
+Why JDBC is outdated :
+=======================
+Connection con 
+PreparedStatement ps 
+execute query (Where we will hard code SQL Query )
+Process result 
+
+in my Java project 
+
+100 jdbc 
+each class on avg 5 methods
+100*5 = 500 methods (5 steps )
+
+5*500 = 2500 lines
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
+
+public class JdbcExample {
+
+    public static void main(String[] args) {
+
+        try {
+            // 1. Load Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // 2. Create Connection
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/testdb",
+                    "root",
+                    "password"
+            );
+
+            // 3. Create Statement
+            Statement stmt = con.createStatement();
+
+            // 4. Execute Query
+            ResultSet rs = stmt.executeQuery("SELECT * FROM employee");
+
+            // 5. Process Result
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+
+                System.out.println(id + " " + name);
+            }
+
+            // 6. Close connection
+            rs.close();
+            stmt.close();
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+====================================================
+Loose coupling 
+
+ORM (Obeject Relational Mapping)
+in ORM framework your database completely independent of code base 
+============================================================================
+
+Servlets : 
+==========
+{
+    f1 
+    f2 
+    f3 
+    ..
+
+    ..
+    ..
+
+}
+HttpServletRequest request ;
+String marks = request.getParamenter
+String clgName = request.getParamenter
+...
+..
+..
+then you should map to Java DAO class 
+============================================
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+
+        // getting form values
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        out.println("<h2>Username: " + username + "</h2>");
+        out.println("<h2>Password: " + password + "</h2>");
+    }
+}
+
+100 servlets 
+5 lines hard coded code 
+500 lines 
+
+@RequestBody Student s
+=======================================================
+2007 Spring 
+2015 Spring Boot 
+
+Non IT trying IT -> Java full stack 
+===============================================================
+Module -1:
+===========
+2 to 3 core Java 
+Spring Basics
+Spring core 
+
+Module 2 :
+=========
+Spring Jdbc 
+Spring AOP 
+
+Module 3 :
+=================
+Spring Boot 
+   * Spring vs Spring Core 
+   * How to create package Structure 
+   * Autoconfiguration helps in Spring Boot 
+   * Base packages multiple base packages 
+   * Tomcat Serfver 
+   * Starter 
+   * Centralized exception Handling 
+   * Response Entity 
+   * Status code 
+   * Crud Apis 
+   
+==============================================
+Module 4 :
+==========
+Spring Data Jpa 
+  * methods of Communication with DB 
+  * multiple others APis  
+  * Data Jpa Mappings 
+      One to One 
+      One to Many 
+=============================================
+Module 5 :
+Tymaleaf and WebMVC 
+======================================
+Modules 6 :
+Spring Security 
+ 7 security models 
+
+Modules 7 :
+============
+Microservices 
+   monolith vs microservices 
+   Eureka 
+   Config 
+   Api gateway 
+   Security 
+   Intersevrice Communication
+   Feign Client 
+   Load Balancing 
+   Hysterix Dashboard 
+
+Module 8:
+  Messagin Services 
+  pubsub 
+  Kafka 
+  Rabbit MQ 
+
+  Kafka real time 
+
+Module 9 :
+  Spring Batch 
+
+Module 10 :
+  Aws 
+  Spring boot Ec2 ,
+  Spring boot with S3 bucker 
+  Spring boot with Iam , rds 
+
+  GCP :
+  Cloud run 
+
+  Azure 
+  Blobstorage 
+  Aks 
+
+Module 11 :
+    tools Junits , redis cache 
+    docker, kubernates ,conterization 
+
+Modules 12 : 
+   Saga design 
+   Api gateway 
+   Bulk head design 
+
+Module 13:
+   Transaction Management 
+   Propagation levels 
+
+==================================================
+2 to 3 months 
+8k with free recordings 
+8.30 Am ist 9.30 am ist 
+
+
+7530008873 
+
+all the notes i will share in watsapp group 
+===============================================
+
+
+
+
+
+
+
+
+
+
+ 

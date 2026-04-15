@@ -1,0 +1,13 @@
+package com.example.demo.repository;
+
+public class A implements Play
+{
+
+	@Override
+	public void playCricket() {
+		// TODO Auto-generated method stub
+		System.out.println("I am playing cricket in ground A ");
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+How to create Spring core Project :
+===================================
+File -> new -> Maven Project -> Skip Archetype -> Finish
+============================================
+src/main/java-> Source code 
+src/main/resource->configuration files 
+src/test/java -> any testing classes go for Junits 
+src/test/resource -> configuration files related to Junits 
+pom.xml-> 

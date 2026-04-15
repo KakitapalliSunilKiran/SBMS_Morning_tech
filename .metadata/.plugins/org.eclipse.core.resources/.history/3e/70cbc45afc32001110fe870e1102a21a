@@ -1,0 +1,14 @@
+package com.example.demo.dao;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("session")
+public class User {
+	
+	User(){
+		System.out.println("Hi I am in User class"+this.hashCode());
+	}
+
+}

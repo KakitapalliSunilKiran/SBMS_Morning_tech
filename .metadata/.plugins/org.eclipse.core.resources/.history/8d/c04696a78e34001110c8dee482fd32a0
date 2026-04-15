@@ -1,0 +1,31 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.repo.MyRepo;
+
+@Service
+public class MyService {
+	
+	
+	private final MyRepo myRepo;
+
+//    @Autowired
+//	public void setMyRepo(MyRepo myRepo) {
+//		this.myRepo = myRepo;
+//	}
+
+	
+	public MyService(MyRepo myRepo) {
+		super();
+		this.myRepo = myRepo;
+	}
+
+	public String getMessage() {
+		return myRepo.getMessage();
+	}
+
+
+
+}

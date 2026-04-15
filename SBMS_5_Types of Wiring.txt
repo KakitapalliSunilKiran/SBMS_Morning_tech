@@ -1,0 +1,29 @@
+Depenedency Injection:
+======================
+Setter Injection
+Constructor Injection
+Field Injection
+============================
+3 points 
+==========================
+On the way which we Inject again classified in 2 types
+
+1. Manual Wiring 
+      -> byName
+      -> byType
+      -> Constructor
+      -> No
+2. Autowring 
+==========================
+scopes: Singleton , Prototype, Request , Session
+BeanFactory vs ApplicationContext
+===============================
+
+byName
+byType(Ambuguity Issue)
+constructor 
+no 
+
+<gas>
+<petrol>
+Engine e1

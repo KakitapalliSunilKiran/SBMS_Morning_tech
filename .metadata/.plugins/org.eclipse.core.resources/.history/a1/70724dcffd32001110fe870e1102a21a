@@ -1,0 +1,19 @@
+package com.example.demo.dao;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class User {
+	
+	String name;
+	int marks;
+	
+	User(){
+		System.out.println("Hi I am in User class"+this.hashCode());
+	}
+
+	public User(String name,int marks){
+		this.name=name;
+		this.marks=marks;
+	}
+}

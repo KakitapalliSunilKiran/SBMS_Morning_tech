@@ -1,0 +1,19 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.example.demo.service.MyService;
+
+@SpringBootApplication
+public class ComparisonOfInjectionApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ctx = SpringApplication.run(ComparisonOfInjectionApplication.class, args);
+		MyService ms = ctx.getBean(MyService.class);
+		String s= ms.getMessage();
+		System.out.println(s);
+	}
+
+}

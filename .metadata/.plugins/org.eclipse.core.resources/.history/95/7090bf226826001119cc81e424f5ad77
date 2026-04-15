@@ -1,0 +1,24 @@
+package carpack;
+
+public class Car 
+{
+	Engine e;
+	
+	public Car(Engine e) {
+		super();
+		this.e = e;
+	}
+
+	public Engine getE() {
+		return e;
+	}
+
+	public void setE(Engine e) {
+		this.e = e;
+	}
+
+	public void startCar() {
+		e.startEngine();
+	}
+
+}

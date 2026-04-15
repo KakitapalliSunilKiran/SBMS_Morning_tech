@@ -1,0 +1,151 @@
+advantages of framework:
+========================
+Easily maintenable
+boiler plate code 
+loose coupling 
+which will support to write common Logic 
+Less chance of  exceptions 
+==============================================
+Demerits of JDbc and Servlets 
+============================
+jdbc:
+=====
+Developer has to write total boiler plate code 
+100 jdbc classes * 5 methods =500 methods 
+5 lines *500=2500
+
+Hibernate :
+===========
+Mainly it follows ORM principals
+
+Servelets :
+===========
+request.getParameter
+
+Structs:
+=======
+the input will be directly injected to DAO class 
+
+
+Challenges of Hibernate and Struts 
+===================================
+Struts Manages only the controller
+Hibernates Mnages only the repo laqyer 
+
+Controller -> Service -> Repo 
+three tier Architecture 
+====================================================================
+
+MVC -> Model -> database
+       View -> presentation layer 
+       Controller -> Entry point 
+=======================================================
+different Modules of Spring :
+==============================
+
+Hibernate -> Red hat 
+Struts -> Apache 
+=================================
+Sun Microsystems -> 3 versions of Java 
+                 -> It didnt introduced any framework 
+                 -> Apache -> Structs 
+                 -> RedHat -> Hibernate
+===========================================
+What is Spring framework:
+=====================
+Application development framework 
+End to End Application development 
+Spring is a Java based framework 
+It released on 2004 
+Current stable version is 7.x
+developed by VM ware 
+=====================================================
+What is Spring Architecture :
+============================
+Spring is developed in Modular fashion 
+there is no dependency between every other module 
+
+We have Several Modules :
+1. Spring core 
+2. spring context 
+3. Spring AOP 
+4. Spring Jdbc /Spring DAO
+5. Spring ORM 
+6. Spring web
+7. Spring Security 
+8. Spring batch 
+9. Spring cloud 
+
+
+Spring framework will not force all the modules to use 
+there is no relationship between one module to other module
+
+===========================================================
+Spring core:
+=============
+It is the Base module of the Spring 
+It is providing the fundamentals of Spring 
+   ->IOC
+   -> DI
+   -> Autowiring 
+=============================================================
+Spring context:
+================
+It is responsible to Mange the Configuration
+It will decide which beans will be created, wont be created 
+Y or N 
+===========================================================
+Spring AOP :
+=================
+POP -> Procedure Oriented Programming 
+OOP -> Object oriented programming 
+AOP -> Aspect oriented programming 
+
+Common Logic :
+==============
+Security 
+Tx
+Auditing 
+Logging 
+-----------------------------------------------
+Busineess
+Amount Withdraws
+Amount Credit '
+Showbalance
+
+Integration part will be taken by AOP 
+====================================================
+Spring Jdbc:
+===========
+Normal jdbc-> persistence layer
+Spring jdbc -> persistence layer 
+
+Sping Jdbc (We can avoid boiler plate code)
+
+Registering the driver (S)
+Getting connection (Spring)
+create stmt (Spring)
+Execute Query (Programmer)
+process result (S)
+Close connetion (S)
+=========================================================
+
+Spring ORM 
+===========
+Object Relational Mapping 
+Hibernated is one of the ORM framework 
+=====================================================
+Spring Web
+============
+to develop presentation layers
+jsp , thymaleaf 
+=================================================
+Spring Rest modules
+===================
+It is used to develop Distributed Application 
+B2B Applications
+MakeMytrip
+Nyka
+IRCTC
+
+

@@ -1,0 +1,14 @@
+package paypackage;
+
+public class PaymentInterface {
+	
+	Payment p;
+	void processPayment() {
+		boolean flag = p.pay();
+		if(flag==true) {
+			System.out.println("Your Payment has succesfully processed");
+			
+		}
+	}
+
+}

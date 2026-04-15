@@ -1,0 +1,14 @@
+package automotive;
+
+public class Car {
+	
+	Engine e;
+	
+	Car(Engine e){
+		this.e=e;
+	}
+	void startCar() {
+		e.startEngine();
+	}
+
+}

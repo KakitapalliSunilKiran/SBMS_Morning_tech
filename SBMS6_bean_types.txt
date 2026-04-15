@@ -1,0 +1,52 @@
+Dependency Injection is of 3 types
+-> Field Injection
+-> Constructor Injection
+-> Setter Injection
+
+based on Wiring of depencies they are classified in 
+
+-> Manual Wiring
+      -> byName, byType , Constructor , No
+-> AutoWiring 
+
+Strategy design pattern :
+=========================
+Interface as a mode of communication 
+has A relationship is preferred over is A relationship 
+
+Spring :
+-> 9 modules 
+
+-> jdbc -> hibernate-> Spring Boot Data Jpa
+-> Servlets -> Struts -> Spring Boot controller layer 
+==========================================================
+Scopes of beans 
+===============
+Singleton :
+     beans will be loaded eagerly 
+     one bean will be created per IOC container
+     if we havent mentioned any scope of the bean default type will be Singleton
+Prototype :
+    beans will be loaded lazily
+    when ever bean is required each time a new bean will be created 
+Request 
+Session
+==========================================================================
+Bean factory vs Application context 
+==========================================================================
+Spring core :
+================
+File -> New -> Maven -> Skip archetype-> finish
+
+Will slowly start with Spring boot 
+
+How to create a Spring Boot Application :
+=======================================
+start.spring.io 
+Eclipse -> File -> new -> Spring starter project
+Sts 
+==========================================
+
+
+
+

@@ -1,0 +1,16 @@
+package com.example.demo.dao;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Customer {
+	
+	Customer(){
+		System.out.println("Hi I am in Customer class");
+	}
+
+}
+
+//@RestController
+//@Service
+//@respository

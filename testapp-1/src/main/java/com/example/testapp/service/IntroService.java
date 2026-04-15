@@ -1,0 +1,17 @@
+package com.example.testapp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.testapp.repo.IntroRepository;
+
+@Service
+public class IntroService {
+	
+	@Autowired
+	IntroRepository repository;
+	public String getMessage() {
+		return repository.getMessage();
+	}
+
+}

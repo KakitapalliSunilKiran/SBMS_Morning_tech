@@ -1,0 +1,154 @@
+How to create Maven Application:
+===============================
+We have to download apache maven
+setup home path , and bin path
+mvn --version
+
+In Eclipse:
+===========
+File -> New Maven project -> Skip the Archetype -> Finish
+
+We are placing dependencies 
+then Maven download from the central repository 
+then we will get one folder extra
+Maven dependencies
+========================================
+src/main/java - > we can keep all source code files 
+src/main/resources -> We can keep all configuration files here
+src/test/java -> we can write junit fileds
+pom.xml -> We can mention all the dependencies here 
+==========================================
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="ref1" class="carapp.DieselEngine"></bean>
+    <bean id="ref2" class="carapp.PetrolEngine"></bean>
+     <bean id="ref3" class="carapp.Car"></bean>
+    
+
+</beans>
+
+========================================================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="ref1" class="carapp.DieselEngine"> 	 
+    </bean>
+    
+    <bean id="ref2" class="carapp.PetrolEngine"></bean>
+     <bean id="ref3" class="carapp.Car">
+     	<property name="e" ref="ref1"></property>
+     </bean>
+</beans>
+===============================================================
+Output:
+I am in default constructor : Bean creation phase
+I am in Serr method : Dependency Injection phase
+Engine failed please start again : We have called explicirtly
+==============================================================
+
+There are 4 scopes mainly 
+1. Singleton :
+
+   getSingletonObject
+    Singleton scope means only 1 bean created per IOC container
+    it follows the principle of Eager loading
+
+     <!-- <bean id="ref3" class="carapp.Car">
+     	<constructor-arg name="e" ref="ref1"></constructor-arg>
+     	<constructor-arg name="sb" ref="ref4"></constructor-arg>
+     </bean> -->
+     
+      <!-- <bean id="ref3" class="carapp.Car">
+     	<constructor-arg index="0" ref="ref1"></constructor-arg>
+     	<constructor-arg index="1" ref="ref4"></constructor-arg>
+     </bean>  -->
+     
+     <bean id="ref3" class="carapp.Car">
+     	<constructor-arg name="e" ref="ref1"></constructor-arg>
+     </bean>
+     
+     <bean id="ref5" class="carapp.Car">
+     	<constructor-arg name="e" ref="ref2"></constructor-arg>
+     </bean>
+     
+     
+2. Prototype:
+   beans will be created once they are required 
+   it follows the principle of lazy loading 
+
+   ApplicationContext ctx = 
+		        new ClassPathXmlApplicationContext("beans.xml");
+		DieselEngine de = ctx.getBean(DieselEngine.class);
+		System.out.println(de.hashCode());
+		DieselEngine de1 = ctx.getBean(DieselEngine.class);
+		System.out.println(de1.hashCode());
+		
+3. Request
+4. Session 
+   Three tier application
+============================================================
+DSA and System design 
+
+can you design a Singleton class using core java :
+
+class Singleton
+{
+    private static final Singleton st;
+
+     private Singleton(){
+
+     } 
+
+    static  Singleton getSingletonObject(){
+
+        Synchronized(this){
+            if(st==null){
+                st=new Singleton();
+                return st;
+             }
+        }
+        
+        return st;
+        ...
+        ...
+        ...
+
+    }
+}
+
+class Ecommerce
+{
+    int x;
+    String test;
+    Arraylist<> al
+
+    Ecommerce(){
+        this.x=x;
+        this.test=test;
+        this.al=new ArrayList<>(al) //shallow cloning 
+    }
+    //All the fields need to be private
+    //no setter methods
+    //for arraylist 
+}
+
+class Tester
+{
+    main(){
+        Ecommer obj=new Ecommerce(10,"sunil",al);
+
+        al.add(1000);
+    }
+}
+
+//How can i make this class as immutab;each
+//Single ton 
