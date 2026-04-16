@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.example.testapp.model.Student;
@@ -59,9 +62,17 @@ public class H2Service {
 		}
 	}
 	
-	public List<Student> fetchStudentDetails(){
-		return cr.fetchStudentDetails();
+	public List<Student> fetchStudentDetails()
+	{
+//		PageRequest pr= PageRequest.of(2, 2);
+//		Page<Student> page= cr.findAll(pr);
+//		List<Student> list = page.getContent();
+		Sort s= Sort.by("name");
+		return cr.findAll(s);
+		//return list;
 	}
+	//10 records are there 
+	//2 records
 	
 	public Student fetchStudentDetailsSingle(int id) {
 		return cr.fetchStudentDetailsSingle(id);

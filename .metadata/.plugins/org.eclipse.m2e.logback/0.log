@@ -2369,3 +2369,6 @@
 2026-04-15 09:26:03,915 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2026-04-15 09:26:03,925 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2026-04-15 09:26:03,927 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\SUNIL KIRAN\Documents\SBMS 8.30 am batch\QualifiervsPrimary\src\test\resources
+2026-04-16 09:01:15,721 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-04-16 09:01:16,012 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2026-04-16 09:01:16,020 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\SUNIL KIRAN\Documents\SBMS 8.30 am batch\H2ThreeTierApp\src\test\resources

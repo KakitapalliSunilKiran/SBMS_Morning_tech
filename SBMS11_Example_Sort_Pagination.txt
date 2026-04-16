@@ -1,0 +1,5 @@
+Pagination:
+==============
+1000 records i dont want to see all thousand records 
+5 records
+Then will go for pagination
