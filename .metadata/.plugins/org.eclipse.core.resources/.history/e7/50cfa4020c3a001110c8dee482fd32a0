@@ -1,0 +1,18 @@
+package automotive;
+
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class Tester {
+	
+	public static void main(String args[])
+	{
+		String str = "Hi";
+
+		str.chars()
+		   .mapToObj(c -> (char) c)
+		   .forEach(c -> System.out.println(c.getClass()));
+	}
+}

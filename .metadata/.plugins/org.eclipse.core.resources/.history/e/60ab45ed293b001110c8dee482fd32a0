@@ -1,0 +1,91 @@
+package com.example.testapp.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
+
+import com.example.testapp.model.Student;
+import com.example.testapp.repository.CrudRepo;
+
+@Service
+public class H2Service {
+	
+	@Autowired
+	CrudRepo cr;
+	
+	public void storeTodB(Student s) {
+		cr.save(s);
+	}
+	
+	public Student getStudentDetails(int id) {
+		Optional<Student> s=cr.findById(id);
+		if(s.isPresent()) {
+			return s.get();
+		}
+		else {
+			return new Student();
+		}
+		
+	}
+	
+	public Student updateStudentDetails(int id,String name) {
+		Optional<Student> s=cr.findById(id);
+		if(s.isPresent()) {
+			Student s1= s.get();
+			s1.setName(name);
+			cr.save(s1);
+			return s1;
+		}
+		else {
+			return new Student();
+		}
+	}
+	
+	public Student getStudentDetailsByName(String str) {
+		return cr.findByName(str);
+	}
+	
+	public Student deleteStudentDetailsMethod(int id) {
+		Optional<Student> s=cr.findById(id);
+		if(s.isPresent()) {
+			Student del=s.get();
+			cr.deleteById(id);
+			return del;
+		}
+		else {
+			return new Student();
+		}
+	}
+	
+	public List<Student> fetchStudentDetails()
+	{
+//		PageRequest pr= PageRequest.of(2, 2);
+//		Page<Student> page= cr.findAll(pr);
+//		List<Student> list = page.getContent();
+		Sort s= Sort.by("name");
+		return cr.findAll(s);
+		//return list;
+	}
+	//10 records are there 
+	//2 records
+	
+	public Student fetchStudentDetailsSingle(int id) {
+		return cr.fetchStudentDetailsSingle(id);
+	}
+	
+	public Student fetchStudentDetailsMultiple(int id) {
+		return cr.fetchStudentDetailsMultiple(id);
+	}
+
+	public void deleteRecord(int id) {
+		 cr.deleteRecord(id);
+	}
+	
+	
+
+}

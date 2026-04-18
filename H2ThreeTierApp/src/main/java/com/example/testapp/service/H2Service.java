@@ -4,19 +4,26 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.example.testapp.model.Student;
 import com.example.testapp.repository.CrudRepo;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Predicate;
+import jakarta.persistence.criteria.Root;
 
 @Service
 public class H2Service {
 	
 	@Autowired
 	CrudRepo cr;
+	
+	 @PersistenceContext
+	    private EntityManager entityManager;
 	
 	public void storeTodB(Student s) {
 		cr.save(s);
@@ -62,17 +69,38 @@ public class H2Service {
 		}
 	}
 	
-	public List<Student> fetchStudentDetails()
-	{
-//		PageRequest pr= PageRequest.of(2, 2);
-//		Page<Student> page= cr.findAll(pr);
-//		List<Student> list = page.getContent();
-		Sort s= Sort.by("name");
-		return cr.findAll(s);
-		//return list;
-	}
+//	public List<Student> fetchStudentDetails()
+//	{
+////		PageRequest pr= PageRequest.of(2, 2);
+////		Page<Student> page= cr.findAll(pr);
+////		List<Student> list = page.getContent();
+////		Sort s= Sort.by("name");
+////		return cr.findAll(s);
+//		Student probe = new Student();
+//		probe.setName("Sunil");
+//
+//		Example<Student> example = Example.of(probe);
+//
+//		List<Student> result = cr.findAll(example);
+//		return result;
+//	}
 	//10 records are there 
 	//2 records
+	
+	public List<Student> fetchStudentDetails() {
+
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Student> cq = cb.createQuery(Student.class);
+
+        Root<Student> root = cq.from(Student.class);
+
+        // Equivalent to probe.setName("Sunil")
+        Predicate predicate = cb.equal(root.get("name"), "Sunil");
+
+        cq.select(root).where(predicate);
+
+        return entityManager.createQuery(cq).getResultList();
+    }
 	
 	public Student fetchStudentDetailsSingle(int id) {
 		return cr.fetchStudentDetailsSingle(id);

@@ -3,3 +3,16 @@ Pagination:
 1000 records i dont want to see all thousand records 
 5 records
 Then will go for pagination
+========================================
+
+daily 3 questions using Java 8 programming streams
+Java 8 to 25 features
+============================================
+last non repeating element 
+
+Student probe = new Student();
+probe.setName("Sunil");
+
+Example<Student> example = Example.of(probe);
+
+List<Student> result = studentRepository.findAll(example);
