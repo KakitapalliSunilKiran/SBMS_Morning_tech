@@ -1,8 +1,11 @@
 package com.example.testapp.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -10,8 +13,13 @@ import jakarta.persistence.Id;
 public class Student {
 	
 	@Id
-	private Integer id;
-	
+	@GenericGenerator(
+	        name = "custom_id",
+	        strategy = "com.example.testapp.service.CustomIdGenerator"
+	 )
+	@GeneratedValue(generator = "custom_id")
+	private String id;
+
 	private String name;
 	
 	private String clgName;
@@ -22,17 +30,17 @@ public class Student {
 		
 	}
 
-	public Student(Integer id, String clgName) {
+	public Student(String id, String clgName) {
 		super();
 		this.id = id;
 		this.clgName = clgName;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

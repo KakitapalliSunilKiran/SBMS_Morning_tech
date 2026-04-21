@@ -1,0 +1,6 @@
+One To one 
+One To Many 
+many to One 
+Many to many
+
+parent and child table will work 
