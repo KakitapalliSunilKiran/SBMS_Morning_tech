@@ -1,0 +1,69 @@
+3 things in mind 
+
+save() 
+
+insert : directly it will create a new record in db
+update : if the id , if you are trying to modify the data 
+       
+upsert : its combination of both insert 
+
+ddl-auto : update
+ddl-auto : create
+==========================================
+{
+    
+    "name":"sunil",
+    "clg": "abc clg"
+}
+
+@Id 
+private integer Id 
+
+will it be considerd as insert or update 
+==============================================
+
+Cascade =persist
+if you are trying to insert the parent child will be automatically
+inserted 
+it does not work for update 
+==============================================
+Cascade persist
+Note : for the persist operation if you are trying to hard code the id 
+if the id is not present in the db , it will be throwing an error 
+
+for insert operation both parent and child will be updated
+
+
+while updating the data child wont get updated only parent 
+will be updated 
+=============================================
+cascade merge : update 
+if we are hard coding id , and id is not there 
+
+@Generated Value : this will treated like a creation of record  
+Merge doesnt support creation this is an error
+===========================================
+Cascade : remove 
+if you remove parent child automatically removed 
+deleteById(3)
+
+trying removing child 
+==============================================
+Detach and Refresh 
+Cascade : Detach 
+There is something called persistence context 
+if the parent went offline automatically the child flush off 
+
+Cascade : Refresh
+if the parent get refreshed child will be refreshed autmatically 
+
+some times there are cases where you 20 fileds where you updated only 10 fileds
+============================================================
+
+
+
+
+
+
+
+
