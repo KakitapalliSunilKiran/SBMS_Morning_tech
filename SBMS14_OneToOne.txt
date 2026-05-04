@@ -9,9 +9,8 @@ upsert : its combination of both insert
 
 ddl-auto : update
 ddl-auto : create
-==========================================
-{
-    
+================================================================
+{ 
     "name":"sunil",
     "clg": "abc clg"
 }
@@ -20,7 +19,7 @@ ddl-auto : create
 private integer Id 
 
 will it be considerd as insert or update 
-==============================================
+================================================================
 
 Cascade =persist
 if you are trying to insert the parent child will be automatically
@@ -31,17 +30,28 @@ Cascade persist
 Note : for the persist operation if you are trying to hard code the id 
 if the id is not present in the db , it will be throwing an error 
 
-for insert operation both parent and child will be updated
+for insert operation both parent and child will be inserted
 
 
 while updating the data child wont get updated only parent 
 will be updated 
+
+"id":100
+
+101
+102
+103
+104
+
+@gener
 =============================================
 cascade merge : update 
 if we are hard coding id , and id is not there 
 
 @Generated Value : this will treated like a creation of record  
 Merge doesnt support creation this is an error
+
+if you update both parent and child both will be updated 
 ===========================================
 Cascade : remove 
 if you remove parent child automatically removed 
@@ -60,6 +70,80 @@ if the parent get refreshed child will be refreshed autmatically
 some times there are cases where you 20 fileds where you updated only 10 fileds
 ============================================================
 
+CascadeType.ALL 
+
+One To One Unidirectional and Bidirectional 
+Cascading Types 
+Lazy vs Eager pending 
+One to Many ()
+
+person -> Address 
+User -> Orders 
+User-> Bank Accounts 
+
+USer-> AAdhar nums => One to One 
+
+@OneToMany 
+
+car -> repairs
+
+
+===============================================
+Json inside array of jsons
+
+{
+  "name": "Sunil",
+  "orders": [
+    {
+      "oid": 103,
+      "oname": "Laptop",
+      "pid": "P1001"
+    },
+    {
+      "oid": 104,
+      "oname": "Mobile",
+      "pid": "P1002"
+    }
+  ]
+}
+===============================================
+Association 
+
+fectch Types and 2 way mapping for One To Many
+============================================== 
+@OneToMany
+@ManyToMany 
+
+@OneToMany -> @ManyToOne
+
+Users->Orders 
+
+
+=======================================================================================================
+Lazy loading means when ever required then only it will load 
+if it is not required it wont load 
+Lazy laoding 
+
+Users-> Orders 
+
+Owning side means which ever the side having join column annotation is called Owning side 
+
+Inverse side , which ever the side having mappedBy that is called Inverse Side 
+======================================================================================
+mappedBy and joinColumn will not exist together 
+
+if you want to give customized name go for name arguement 
+
+if we want to Lazy or eager got FetchType 
+
+if you want to mention 2 way mapping go for mappedBy 
+
+if you want to mention cascade type go for cascade Type 
+========================================================================================
+
+
+System design by Alex xu 
+=====================================================================================
 
 
 

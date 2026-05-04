@@ -1,10 +1,15 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Orders {
+	
 	
 	@Id
 	private Integer oid;
@@ -12,7 +17,20 @@ public class Orders {
 	private String oname;
 	
 	private String pid;
-
+	
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	@JsonBackReference
+	private Users user;
+	
+	//ford client interview 
+	
+	//jpql
+	//query 
+	
+	//30 lines 
+	
+	
 	public Integer getOid() {
 		return oid;
 	}
@@ -36,6 +54,15 @@ public class Orders {
 	public void setPid(String pid) {
 		this.pid = pid;
 	}
+	
+	public Users getUser() {
+		return user;
+	}
+
+	public void setUser(Users user) {
+		this.user = user;
+	}
+
 }
 
 //"id":20
