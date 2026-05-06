@@ -11,13 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Users;
 import com.example.demo.service.ManyToManyService;
 
-
 @RestController
 @RequestMapping("api/v1")
 public class ManyToManyController 
 {
 	@Autowired
 	private ManyToManyService ots;
+	
+	
+	@GetMapping("/welcome")
+	public String getMessage() {
+		return "Welcome to Durgasoft";
+	}
 	
 	
 	@PostMapping("/save")
