@@ -19,9 +19,14 @@ public class ManyToManyController
 	private ManyToManyService ots;
 	
 	
-	@GetMapping("/welcome")
+	@GetMapping("/welcome/admin")
 	public String getMessage() {
-		return "Welcome to Durgasoft";
+		return "Welcome to Durgasoft.....admin";
+	}
+	
+	@GetMapping("/welcome/user")
+	public String getMessage1() {
+		return "Welcome to Durgasoft.....user";
 	}
 	
 	
