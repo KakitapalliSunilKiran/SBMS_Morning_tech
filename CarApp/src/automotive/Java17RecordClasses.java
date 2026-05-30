@@ -14,16 +14,16 @@ record Employee(int id,String name) {
 //                    "Name cannot be null");
 //        }
 //	}
-	public Employee(int id, String name) 
-	{
-
-        if(id <= 0) {
-            throw new IllegalArgumentException();
-        }
-
-        this.id = id;
-        this.name = name;
-    }
+//	public Employee(int id, String name) 
+//	{
+//
+//        if(id <= 0) {
+//            throw new IllegalArgumentException();
+//        }
+//
+//        this.id = id;
+//        this.name = name;
+//    }
 	
 }
 public class Java17RecordClasses 

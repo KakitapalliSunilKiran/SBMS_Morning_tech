@@ -22,7 +22,9 @@ non-sealed class Bus extends Vehicle
 		System.out.println("I am in Bus class");
 	}
 }
-
+//selaed -> Limited Inheritance
+//non-sealed -> Unlimited Inheritance
+//final -> No inheritance
 public class Java17SealedClasses extends Bus {
 
 }

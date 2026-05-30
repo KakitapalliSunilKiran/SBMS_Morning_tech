@@ -35,10 +35,13 @@ public class Java17Switchfeatures {
 //		int x=1;
 //		String ans=switch(x) 
 //		{
-//			case 1->"Monday";
+//			case 1-> "Monday";
 //			default->"please enter valid input";
 //		};
-//		System.out.println(ans);
+//		
+		
+	//	System.out.println(ans);
+	//	()->return  "hi";
 		
 //		int x=2;
 //		int ans=switch(x) {
@@ -52,14 +55,26 @@ public class Java17Switchfeatures {
 //			}
 //		};
 //		System.out.println(ans);
-//		
-		int x=3;
-		switch(x) {
-			case 3,4->System.out.println("Today is Sunday");
-			case 6,7->System.out.println("Today is Monday");
-			default->System.out.println("Please enter a valid input");
-		}
+        
 		
+//		(str)-{
+//			return "hey...."
+//		}
+//		int x=3;
+//		switch(x) {
+//			case 3,4->System.out.println("Today is Sunday");
+//			case 6,7->System.out.println("Today is Monday");
+//			default->System.out.println("Please enter a valid input");
+//		}
+		
+//		Object obj="Sunil";
+//		String s =switch(obj)
+//		{
+//			case Integer i->"Obj is Integer";
+//			case String s1->"Obj is String";
+//			default -> throw new IllegalArgumentException("Unexpected value: " + obj);
+//			
+//		};
 	}
 
 }

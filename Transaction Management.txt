@@ -1,0 +1,30 @@
+Transaction Management
+========================
+Commit and Rollback willl happen automatically 
+
+Book My Show :
+=============
+We will mark 2 seats and will go for Payment 
+if payment failed 
+
+unreserved 
+Intermediate 
+Reserverved
+
+if there are n operations 
+
+n1-> n2-> n3....................nn
+if some operation is failed we will rollback 
+===============================================================================================
+
+
+Joinpoint -> it will identify which ever the method having @Transactional
+
+Advice ->  It will run some functionality before and after Transaction Method 
+=============================================================================================
+Transaction Management:
+======================
+It can be done in 2 ways 
+
+1. Declarative Approach 
+2. Programmatic Approach 

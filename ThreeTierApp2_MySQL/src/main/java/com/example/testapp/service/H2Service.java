@@ -8,14 +8,17 @@ import org.springframework.stereotype.Service;
 import com.example.testapp.model.Student;
 import com.example.testapp.repository.CrudRepo;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class H2Service {
 	
 	@Autowired
 	CrudRepo cr;
 	
+	@Transactional
 	public void storeTodB(Student s) {
-		cr.save(s);
+		throw new RuntimeException();
 	}
 	
 	public Student getStudentDetails(int id) {

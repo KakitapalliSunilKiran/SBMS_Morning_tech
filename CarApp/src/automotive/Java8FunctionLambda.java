@@ -11,16 +11,19 @@ interface students
 //{
 //
 //	@Override
-//	public void getGrades() {
-//		System.out.println("Hey my grades are A plus");
+//	public int sum(int x, int y) {
+//		// TODO Auto-generated method stub
+//		return 0;
 //	}
+//
+//	
 //	
 //}
 public class Java8FunctionLambda {
 
 	public static void main(String[] args) {
 		
-		students obj = ( x, y) ->x+y;
+		students obj = (x, y) ->x+y;
 		int ans = obj.sum(100,200);
 			
 	
