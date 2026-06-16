@@ -1,0 +1,39 @@
+There are different Kinds of Propagation Levels are there in declarative approach 
+
+Required 
+Required_New 
+Supports
+Not Supported 
+Never 
+Mandatory 
+Nested 
+====================================================== 
+
+Programmatic Approach 
+Declarative Approach 
+===============================================
+Propagation Type = Required 
+if there is an existing Transaction it will continue with existing Transaction 
+if there is no existing Transaction it will create a new transaction 
+=========================================
+Propagation Type = Required_New 
+if there is an existing transaction also it will create a new Transaction  
+if there is no existing transaction it will create a new transaction 
+=====================================================
+Propagation Type = Mandatory
+if there is an existing transaction it will be working 
+if there is no existing transaction it will throw exception
+======================================================
+Propagation Type = Never
+if there is an existing transaction it will throw exception 
+if there is no existing transaction it will work 
+=======================================================
+Propagation Type = Supports 
+If there is an existing transaction it will support that Transaction 
+If there is no existing transaction it wont create a new Transaction 
+============================================================
+Propagation Type = Not Supported
+It will suspend the existing Transaction 
+===================================================
+
+E 

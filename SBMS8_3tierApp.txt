@@ -33,5 +33,9 @@ h2 driver class
 
 
 
+ Window_Size-maxcharfreq<=k
 
+ 4 As 1 B
+
+ AAAAB-4<=1
 

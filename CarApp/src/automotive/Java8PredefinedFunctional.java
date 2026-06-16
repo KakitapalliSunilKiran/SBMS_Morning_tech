@@ -1,8 +1,12 @@
 package automotive;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 public class Java8PredefinedFunctional {
 
@@ -34,6 +38,22 @@ public class Java8PredefinedFunctional {
         Supplier<Integer> s11=()->(int)Math.random();
         System.out.println(s11.get());
 //        
+        String str = "programming";
+
+        Character result = str.chars()
+                              .mapToObj(c -> (char) c)
+                              .collect(Collectors.groupingBy(
+                                      Function.identity(),
+                                      LinkedHashMap::new,
+                                      Collectors.counting()))
+                              .entrySet()
+                              .stream()
+                              .filter(entry -> entry.getValue() > 1)
+                              .map(Map.Entry::getKey)
+                              .findFirst()
+                              .orElse(null);
+
+        System.out.println(result);
 	}
 
 }

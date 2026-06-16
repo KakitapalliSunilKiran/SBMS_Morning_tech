@@ -1,0 +1,24 @@
+Transaction Management : - 
+     Propagation levels
+
+     Required
+     Supports
+     Mandtory
+     Requires_New
+     Not_supported
+     Never
+     Nested 
+
+parent method -> child method 
+=================================
+if parent method required and child also required 
+
+if no exceptions total data will be saved 
+if there is an exception total data will be revoke
+
+------------------------------------------------
+parent method required child supports 
+if no exceptions total data will be saved
+
+In the transaction block child will also be a part of it 
+from no new transaction will be formed 
