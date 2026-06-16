@@ -1,0 +1,24 @@
+type Query {
+    greet: String
+    findById(id: Int!): Student
+}
+
+type Mutation {
+    storeStudent(studentInput: StudentInput!): String
+    updateStudent(id: Int!, uname: String!): String
+    deleteStudent(id: Int!): String
+}
+
+type Student {
+    id: Int
+    marks: Int
+    sname: String
+    clg: String
+}
+
+input StudentInput {
+    id: Int
+    marks: Int
+    sname: String
+    clg: String
+}

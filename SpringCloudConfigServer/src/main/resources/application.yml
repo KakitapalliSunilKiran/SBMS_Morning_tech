@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: SpringCloudConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/KakitapalliSunilKiran/Config_properties
+          default-label: main
+    
+server:
+  port: 9899
